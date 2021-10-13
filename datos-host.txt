@@ -1,0 +1,16 @@
+https://minisitios-ideas.educacion.espinlabs.com.ar/
+
+WP_USER = administrador
+WP_PASS = HvV#s4hai0t^B(#)Wq
+
+MINISITIO-IDEAS
+
+FTP/SFTP HOST = minisitios-ideas.educacion.espinlabs.com.ar
+FTP/SFTP USER = educacion_minisitios-ideas
+FTP/SFTP PASS = 6N8jNntiSzJ_M
+PHPMYADMIN= https://minisitios-ideas.educacion.espinlabs.com.ar/phpmyadmin
+DB_NAME=c50_minisitios
+BD_USER=c50_minisitios
+DB_PASS= SNyvf!bPZt8T
+
+DIR_WEB = /var/www/minisitios-ideas.educacion.espinlabs.com.ar/web/wordpress/
