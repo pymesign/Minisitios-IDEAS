@@ -1,0 +1,29 @@
+
+---Downloaded files---
+The import files for: Datos de Proyecto Ejemplo were successfully downloaded!
+Initial max execution time = 120
+Files info:
+Site URL = https://minisitios-ideas.educacion.espinlabs.com.ar/proyecto1
+Data file = /var/www/clients/client50/web111/web/wordpress/wp-content/uploads/sites/2/2021/10/demo-content-import-file_2021-10-13__20-46-18.xml
+Widget file = /var/www/clients/client50/web111/web/wordpress/wp-content/uploads/sites/2/2021/10/demo-widgets-import-file_2021-10-13__20-46-18.json
+Customizer file = /var/www/clients/client50/web111/web/wordpress/wp-content/uploads/sites/2/2021/10/demo-customizer-import-file_2021-10-13__20-46-18.dat
+Redux files:
+not defined!
+
+---Importing widgets---
+Sidebar : 
+
+Bloque - No Title - Widget already exists
+Bloque - No Title - Imported
+Bloque - No Title - Imported
+Bloque - No Title - Imported
+Bloque - No Title - Imported
+Bloque - No Title - Imported
+
+
+
+---Importing customizer settings---
+Customizer settings import finished!
+
+---ocdi/after_import---
+

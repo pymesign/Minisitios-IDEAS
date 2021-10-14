@@ -184,63 +184,25 @@ if (defined('JETPACK__VERSION')) {
 }
 
 //OCDI options custom #MODIF#
-/*function ocdi_import_files()
-{
-	return [
-		[
-			'import_file_name'           => 'Demo Import 1',
-			'categories'                 => ['Category 1', 'Category 2'],
-			'import_file_url'            => 'http://localhost/wpmultisite/ocdi/demomultisitio.WordPress.2021-10-11.xml',
-		],
-	];
-}
-add_filter('ocdi/import_files', 'ocdi_import_files');*/
 function ocdi_import_files()
 {
 	return [
 		[
-			'import_file_name'           => 'Demo Import 1',
-			'categories'                 => ['Category 1', 'Category 2'],
-			'import_file_url'            => 'http://localhost/wpmultisite/ocdi/demomultisitio.WordPress.2021-10-13.xml',
-			'import_widget_file_url'     => 'http://localhost/wpmultisite/ocdi/localhost-wpmultisite-widgets.wie',
-			'import_customizer_file_url' => 'http://localhost/wpmultisite/ocdi/ideas-export.dat',
-			/*'import_redux'               => [
-				[
-					'file_url'    => 'http://localhost/wpmultisite/ocdi/redux_options_',
-					'option_name' => 'redux_option_name',
-				],
-			],*/
-			'import_preview_image_url'   => 'http://localhost/wpmultisite/ocdi/preview_import_image1.png',
-			'preview_url'                => 'http://localhost/wpmultisite',
-		],
-		[
-			'import_file_name'           => 'Demo Import 2 TECH',
-			'categories'                 => ['New category', 'Old category'],
-			'import_file_url'            => 'http://localhost/wpmultisite/ocdi/demomultisitiotech.WordPress.2021-10-12.xml',
-			//'import_widget_file_url'     => 'http://www.your_domain.com/ocdi/widgets2.json',
-			'import_customizer_file_url' => 'http://localhost/wpmultisite/ocdi/ideas-tech-export.dat',
-			/*'import_redux'               => [
-				[
-					'file_url'    => 'http://www.your_domain.com/ocdi/redux.json',
-					'option_name' => 'redux_option_name',
-				],
-				[
-					'file_url'    => 'http://www.your_domain.com/ocdi/redux2.json',
-					'option_name' => 'redux_option_name_2',
-				],
-			],*/
-			'import_preview_image_url'   => 'http://localhost/wpmultisite/ocdi/preview_import_image1.png',
-			'preview_url'                => 'http://localhost/wpmultisite',
+			'import_file_name'           => 'Datos de Proyecto Ejemplo',
+			'import_file_url'            => 'https://minisitios-ideas.educacion.espinlabs.com.ar/ocdi/educacion-minisitioideas.WordPress.2021-10-13.xml',
+			'import_widget_file_url'     => 'https://minisitios-ideas.educacion.espinlabs.com.ar/ocdi/minisitios-ideas.educacion.espinlabs.com.ar-widgets.wie',
+			'import_customizer_file_url' => 'https://minisitios-ideas.educacion.espinlabs.com.ar/ocdi/ideas-export.dat',
+			'import_preview_image_url'   => 'https://minisitios-ideas.educacion.espinlabs.com.ar/ocdi/preview_import_image1.png',
+			'preview_url'                => 'https://minisitios-ideas.educacion.espinlabs.com.ar/',
 		],
 	];
 }
 add_filter('ocdi/import_files', 'ocdi_import_files');
 
-//esta funcion deberia asignar el menu principal
-
+//esta funcion asigna y activa el menu principal
 function ocdi_after_import_setup()
 {
-	// Assign menus to their locations.
+	// Asigna el menu a su ubicación.
 	$main_menu = get_term_by('name', 'primary', 'nav_menu');
 
 	set_theme_mod(
@@ -250,11 +212,7 @@ function ocdi_after_import_setup()
 		)
 	);
 
-	/*$locations = get_theme_mod('nav_menu_locations');
-	$locations['menu-1'] = '4';
-	set_theme_mod('nav_menu_locations', $locations);*/
-
-	// Assign front page and posts page (blog page).
+	// Asigna front page y posts page (blog page).
 	$front_page_id = get_page_by_title('Inicio');
 	$blog_page_id  = get_page_by_title('Blog');
 
