@@ -16,7 +16,7 @@
 <!-- 7. WordPress will then import each of the posts, pages, comments, categories, etc. -->
 <!--    contained in this file into your site. -->
 
-	<!-- generator="WordPress/5.8.1" created="2021-10-15 18:11" -->
+	<!-- generator="WordPress/5.8.1" created="2021-10-15 18:26" -->
 <rss version="2.0"
 	xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -29,7 +29,7 @@
 	<title>Educacion - Minisitio Ideas</title>
 	<link>https://minisitios-ideas.educacion.espinlabs.com.ar</link>
 	<description>Otro sitio realizado con WordPress</description>
-	<pubDate>Fri, 15 Oct 2021 18:11:13 +0000</pubDate>
+	<pubDate>Fri, 15 Oct 2021 18:26:47 +0000</pubDate>
 	<language>es-AR</language>
 	<wp:wxr_version>1.2</wp:wxr_version>
 	<wp:base_site_url>https://minisitios-ideas.educacion.espinlabs.com.ar/</wp:base_site_url>
@@ -53,11 +53,11 @@
 		<wp:term>
 		<wp:term_id>2</wp:term_id>
 		<wp:term_taxonomy><![CDATA[nav_menu]]></wp:term_taxonomy>
-		<wp:term_slug><![CDATA[menu-1]]></wp:term_slug>
+		<wp:term_slug><![CDATA[primary]]></wp:term_slug>
 		<wp:term_parent><![CDATA[]]></wp:term_parent>
-		<wp:term_name><![CDATA[Menu 1]]></wp:term_name>
+		<wp:term_name><![CDATA[primary]]></wp:term_name>
 	</wp:term>
-			<wp:term><wp:term_id>2</wp:term_id><wp:term_taxonomy>nav_menu</wp:term_taxonomy><wp:term_slug><![CDATA[menu-1]]></wp:term_slug><wp:term_name><![CDATA[Menu 1]]></wp:term_name>
+			<wp:term><wp:term_id>2</wp:term_id><wp:term_taxonomy>nav_menu</wp:term_taxonomy><wp:term_slug><![CDATA[primary]]></wp:term_slug><wp:term_name><![CDATA[primary]]></wp:term_name>
 </wp:term>
 
 	<generator>https://wordpress.org/?v=5.8.1</generator>
@@ -142,7 +142,7 @@
 							</item>
 					<item>
 		<title><![CDATA[]]></title>
-		<link>https://minisitios-ideas.educacion.espinlabs.com.ar/blog/2021/10/13/12/</link>
+		<link>https://minisitios-ideas.educacion.espinlabs.com.ar/blog/2021/10/15/12/</link>
 		<pubDate>Wed, 13 Oct 2021 19:30:10 +0000</pubDate>
 		<dc:creator><![CDATA[administrador]]></dc:creator>
 		<guid isPermaLink="false">https://minisitios-ideas.educacion.espinlabs.com.ar/?p=12</guid>
@@ -150,10 +150,10 @@
 		<content:encoded><![CDATA[ ]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>12</wp:post_id>
-		<wp:post_date><![CDATA[2021-10-13 16:39:47]]></wp:post_date>
+		<wp:post_date><![CDATA[2021-10-15 15:26:36]]></wp:post_date>
 		<wp:post_date_gmt><![CDATA[2021-10-13 19:30:10]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2021-10-13 16:39:47]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2021-10-13 19:39:47]]></wp:post_modified_gmt>
+		<wp:post_modified><![CDATA[2021-10-15 15:26:36]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2021-10-15 18:26:36]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[12]]></wp:post_name>
@@ -163,7 +163,7 @@
 		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-										<category domain="nav_menu" nicename="menu-1"><![CDATA[Menu 1]]></category>
+										<category domain="nav_menu" nicename="primary"><![CDATA[primary]]></category>
 						<wp:postmeta>
 		<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
 		<wp:meta_value><![CDATA[post_type]]></wp:meta_value>
@@ -195,6 +195,10 @@
 							<wp:postmeta>
 		<wp:meta_key><![CDATA[_menu_item_url]]></wp:meta_key>
 		<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_old_date]]></wp:meta_key>
+		<wp:meta_value><![CDATA[2021-10-13]]></wp:meta_value>
 		</wp:postmeta>
 							</item>
 					<item>
@@ -259,7 +263,7 @@
 							</item>
 					<item>
 		<title><![CDATA[]]></title>
-		<link>https://minisitios-ideas.educacion.espinlabs.com.ar/blog/2021/10/13/14/</link>
+		<link>https://minisitios-ideas.educacion.espinlabs.com.ar/blog/2021/10/15/14/</link>
 		<pubDate>Wed, 13 Oct 2021 19:30:10 +0000</pubDate>
 		<dc:creator><![CDATA[administrador]]></dc:creator>
 		<guid isPermaLink="false">https://minisitios-ideas.educacion.espinlabs.com.ar/?p=14</guid>
@@ -267,10 +271,10 @@
 		<content:encoded><![CDATA[ ]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>14</wp:post_id>
-		<wp:post_date><![CDATA[2021-10-13 16:39:47]]></wp:post_date>
+		<wp:post_date><![CDATA[2021-10-15 15:26:36]]></wp:post_date>
 		<wp:post_date_gmt><![CDATA[2021-10-13 19:30:10]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2021-10-13 16:39:47]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2021-10-13 19:39:47]]></wp:post_modified_gmt>
+		<wp:post_modified><![CDATA[2021-10-15 15:26:36]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2021-10-15 18:26:36]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[14]]></wp:post_name>
@@ -280,7 +284,7 @@
 		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-										<category domain="nav_menu" nicename="menu-1"><![CDATA[Menu 1]]></category>
+										<category domain="nav_menu" nicename="primary"><![CDATA[primary]]></category>
 						<wp:postmeta>
 		<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
 		<wp:meta_value><![CDATA[taxonomy]]></wp:meta_value>
@@ -312,6 +316,10 @@
 							<wp:postmeta>
 		<wp:meta_key><![CDATA[_menu_item_url]]></wp:meta_key>
 		<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_old_date]]></wp:meta_key>
+		<wp:meta_value><![CDATA[2021-10-13]]></wp:meta_value>
 		</wp:postmeta>
 							</item>
 					<item>
@@ -429,7 +437,7 @@
 														</item>
 					<item>
 		<title><![CDATA[]]></title>
-		<link>https://minisitios-ideas.educacion.espinlabs.com.ar/blog/2021/10/13/29/</link>
+		<link>https://minisitios-ideas.educacion.espinlabs.com.ar/blog/2021/10/15/29/</link>
 		<pubDate>Wed, 13 Oct 2021 19:39:47 +0000</pubDate>
 		<dc:creator><![CDATA[administrador]]></dc:creator>
 		<guid isPermaLink="false">https://minisitios-ideas.educacion.espinlabs.com.ar/?p=29</guid>
@@ -437,10 +445,10 @@
 		<content:encoded><![CDATA[ ]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>29</wp:post_id>
-		<wp:post_date><![CDATA[2021-10-13 16:39:47]]></wp:post_date>
+		<wp:post_date><![CDATA[2021-10-15 15:26:37]]></wp:post_date>
 		<wp:post_date_gmt><![CDATA[2021-10-13 19:39:47]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2021-10-13 16:39:47]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2021-10-13 19:39:47]]></wp:post_modified_gmt>
+		<wp:post_modified><![CDATA[2021-10-15 15:26:37]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2021-10-15 18:26:37]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[29]]></wp:post_name>
@@ -450,7 +458,7 @@
 		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-										<category domain="nav_menu" nicename="menu-1"><![CDATA[Menu 1]]></category>
+										<category domain="nav_menu" nicename="primary"><![CDATA[primary]]></category>
 						<wp:postmeta>
 		<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
 		<wp:meta_value><![CDATA[post_type]]></wp:meta_value>
@@ -483,10 +491,14 @@
 		<wp:meta_key><![CDATA[_menu_item_url]]></wp:meta_key>
 		<wp:meta_value><![CDATA[]]></wp:meta_value>
 		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_old_date]]></wp:meta_key>
+		<wp:meta_value><![CDATA[2021-10-13]]></wp:meta_value>
+		</wp:postmeta>
 							</item>
 					<item>
 		<title><![CDATA[]]></title>
-		<link>https://minisitios-ideas.educacion.espinlabs.com.ar/blog/2021/10/13/30/</link>
+		<link>https://minisitios-ideas.educacion.espinlabs.com.ar/blog/2021/10/15/30/</link>
 		<pubDate>Wed, 13 Oct 2021 19:39:47 +0000</pubDate>
 		<dc:creator><![CDATA[administrador]]></dc:creator>
 		<guid isPermaLink="false">https://minisitios-ideas.educacion.espinlabs.com.ar/?p=30</guid>
@@ -494,10 +506,10 @@
 		<content:encoded><![CDATA[ ]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>30</wp:post_id>
-		<wp:post_date><![CDATA[2021-10-13 16:39:47]]></wp:post_date>
+		<wp:post_date><![CDATA[2021-10-15 15:26:37]]></wp:post_date>
 		<wp:post_date_gmt><![CDATA[2021-10-13 19:39:47]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2021-10-13 16:39:47]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2021-10-13 19:39:47]]></wp:post_modified_gmt>
+		<wp:post_modified><![CDATA[2021-10-15 15:26:37]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2021-10-15 18:26:37]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[30]]></wp:post_name>
@@ -507,7 +519,7 @@
 		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-										<category domain="nav_menu" nicename="menu-1"><![CDATA[Menu 1]]></category>
+										<category domain="nav_menu" nicename="primary"><![CDATA[primary]]></category>
 						<wp:postmeta>
 		<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
 		<wp:meta_value><![CDATA[post_type]]></wp:meta_value>
@@ -540,10 +552,14 @@
 		<wp:meta_key><![CDATA[_menu_item_url]]></wp:meta_key>
 		<wp:meta_value><![CDATA[]]></wp:meta_value>
 		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_old_date]]></wp:meta_key>
+		<wp:meta_value><![CDATA[2021-10-13]]></wp:meta_value>
+		</wp:postmeta>
 							</item>
 					<item>
 		<title><![CDATA[]]></title>
-		<link>https://minisitios-ideas.educacion.espinlabs.com.ar/blog/2021/10/13/31/</link>
+		<link>https://minisitios-ideas.educacion.espinlabs.com.ar/blog/2021/10/15/31/</link>
 		<pubDate>Wed, 13 Oct 2021 19:39:47 +0000</pubDate>
 		<dc:creator><![CDATA[administrador]]></dc:creator>
 		<guid isPermaLink="false">https://minisitios-ideas.educacion.espinlabs.com.ar/?p=31</guid>
@@ -551,10 +567,10 @@
 		<content:encoded><![CDATA[ ]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>31</wp:post_id>
-		<wp:post_date><![CDATA[2021-10-13 16:39:47]]></wp:post_date>
+		<wp:post_date><![CDATA[2021-10-15 15:26:37]]></wp:post_date>
 		<wp:post_date_gmt><![CDATA[2021-10-13 19:39:47]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2021-10-13 16:39:47]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2021-10-13 19:39:47]]></wp:post_modified_gmt>
+		<wp:post_modified><![CDATA[2021-10-15 15:26:37]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2021-10-15 18:26:37]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[31]]></wp:post_name>
@@ -564,7 +580,7 @@
 		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-										<category domain="nav_menu" nicename="menu-1"><![CDATA[Menu 1]]></category>
+										<category domain="nav_menu" nicename="primary"><![CDATA[primary]]></category>
 						<wp:postmeta>
 		<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
 		<wp:meta_value><![CDATA[post_type]]></wp:meta_value>
@@ -597,10 +613,14 @@
 		<wp:meta_key><![CDATA[_menu_item_url]]></wp:meta_key>
 		<wp:meta_value><![CDATA[]]></wp:meta_value>
 		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_old_date]]></wp:meta_key>
+		<wp:meta_value><![CDATA[2021-10-13]]></wp:meta_value>
+		</wp:postmeta>
 							</item>
 					<item>
 		<title><![CDATA[]]></title>
-		<link>https://minisitios-ideas.educacion.espinlabs.com.ar/blog/2021/10/13/32/</link>
+		<link>https://minisitios-ideas.educacion.espinlabs.com.ar/blog/2021/10/15/32/</link>
 		<pubDate>Wed, 13 Oct 2021 19:39:47 +0000</pubDate>
 		<dc:creator><![CDATA[administrador]]></dc:creator>
 		<guid isPermaLink="false">https://minisitios-ideas.educacion.espinlabs.com.ar/?p=32</guid>
@@ -608,10 +628,10 @@
 		<content:encoded><![CDATA[ ]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>32</wp:post_id>
-		<wp:post_date><![CDATA[2021-10-13 16:39:47]]></wp:post_date>
+		<wp:post_date><![CDATA[2021-10-15 15:26:37]]></wp:post_date>
 		<wp:post_date_gmt><![CDATA[2021-10-13 19:39:47]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2021-10-13 16:39:47]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2021-10-13 19:39:47]]></wp:post_modified_gmt>
+		<wp:post_modified><![CDATA[2021-10-15 15:26:37]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2021-10-15 18:26:37]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[32]]></wp:post_name>
@@ -621,7 +641,7 @@
 		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-										<category domain="nav_menu" nicename="menu-1"><![CDATA[Menu 1]]></category>
+										<category domain="nav_menu" nicename="primary"><![CDATA[primary]]></category>
 						<wp:postmeta>
 		<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
 		<wp:meta_value><![CDATA[post_type]]></wp:meta_value>
@@ -654,10 +674,14 @@
 		<wp:meta_key><![CDATA[_menu_item_url]]></wp:meta_key>
 		<wp:meta_value><![CDATA[]]></wp:meta_value>
 		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_old_date]]></wp:meta_key>
+		<wp:meta_value><![CDATA[2021-10-13]]></wp:meta_value>
+		</wp:postmeta>
 							</item>
 					<item>
 		<title><![CDATA[]]></title>
-		<link>https://minisitios-ideas.educacion.espinlabs.com.ar/blog/2021/10/13/33/</link>
+		<link>https://minisitios-ideas.educacion.espinlabs.com.ar/blog/2021/10/15/33/</link>
 		<pubDate>Wed, 13 Oct 2021 19:39:47 +0000</pubDate>
 		<dc:creator><![CDATA[administrador]]></dc:creator>
 		<guid isPermaLink="false">https://minisitios-ideas.educacion.espinlabs.com.ar/?p=33</guid>
@@ -665,10 +689,10 @@
 		<content:encoded><![CDATA[ ]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>33</wp:post_id>
-		<wp:post_date><![CDATA[2021-10-13 16:39:47]]></wp:post_date>
+		<wp:post_date><![CDATA[2021-10-15 15:26:36]]></wp:post_date>
 		<wp:post_date_gmt><![CDATA[2021-10-13 19:39:47]]></wp:post_date_gmt>
-		<wp:post_modified><![CDATA[2021-10-13 16:39:47]]></wp:post_modified>
-		<wp:post_modified_gmt><![CDATA[2021-10-13 19:39:47]]></wp:post_modified_gmt>
+		<wp:post_modified><![CDATA[2021-10-15 15:26:36]]></wp:post_modified>
+		<wp:post_modified_gmt><![CDATA[2021-10-15 18:26:36]]></wp:post_modified_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
 		<wp:post_name><![CDATA[33]]></wp:post_name>
@@ -678,7 +702,7 @@
 		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-										<category domain="nav_menu" nicename="menu-1"><![CDATA[Menu 1]]></category>
+										<category domain="nav_menu" nicename="primary"><![CDATA[primary]]></category>
 						<wp:postmeta>
 		<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
 		<wp:meta_value><![CDATA[post_type]]></wp:meta_value>
@@ -710,6 +734,10 @@
 							<wp:postmeta>
 		<wp:meta_key><![CDATA[_menu_item_url]]></wp:meta_key>
 		<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_old_date]]></wp:meta_key>
+		<wp:meta_value><![CDATA[2021-10-13]]></wp:meta_value>
 		</wp:postmeta>
 							</item>
 					<item>
