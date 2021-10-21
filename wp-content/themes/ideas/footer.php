@@ -13,6 +13,23 @@
 ?>
 
 <footer id="colophon" class="site-footer">
+	<div style="display:flex; justify-content:space-around;">
+		<div>
+			<?php
+			switch_to_blog('1');
+			// Do something
+			echo do_shortcode('[content_block id=46]');
+			restore_current_blog();
+			?>
+		</div>
+		<div>
+			<?php if (is_active_sidebar('footer')) { ?>
+				<ul id="sidebar">
+					<?php dynamic_sidebar('footer'); ?>
+				</ul>
+			<?php } ?>
+		</div>
+	</div>
 	<div class="site-info">
 		<a href="<?php echo esc_url(__('https://wordpress.org/', 'ideas')); ?>">
 			<?php
@@ -26,12 +43,6 @@
 		printf(esc_html__('Theme: %1$s by %2$s.', 'ideas'), 'ideas', '<a href="http://www.pymesign.com">Diego Moreno</a>');
 		?>
 	</div><!-- .site-info -->
-	<?php
-	switch_to_blog('1');
-	// Do something
-	echo do_shortcode('[content_block id=46]');
-	restore_current_blog();
-	?>
 </footer><!-- #colophon -->
 </div><!-- #page -->
 
