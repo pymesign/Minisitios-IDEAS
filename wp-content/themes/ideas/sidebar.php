@@ -33,6 +33,11 @@ if (!is_active_sidebar('sidebar-1')) {
 	<?php if (get_field('imagen_representativa', '10')) : ?>
 		<p><img src="<?php the_field('imagen_representativa', '10'); ?>" alt="Imagen representativa" /></p>
 	<?php endif; ?>
-
+	<?php
+	switch_to_blog('1');
+	// Llamado a content block
+	echo do_shortcode('[content_block id=49]');
+	restore_current_blog();
+	?>
 	<?php dynamic_sidebar('sidebar-1'); ?>
 </aside><!-- #secondary -->
