@@ -156,8 +156,79 @@ add_action('widgets_init', 'ideas_widgets_init');
  */
 function ideas_scripts()
 {
+	//Google fonts from ideas-templates
+	wp_enqueue_style(
+		'google-fonts',
+		'https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap',
+		false
+	);
+
+	//Bootstrap 3.4.1 from ideas-templates
+	wp_enqueue_style(
+		'bootstrap',
+		'https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css',
+		array(),
+		'3.4.1'
+	);
+
+	//Custom css from ideas-templates
+	wp_enqueue_style('custom', get_template_directory_uri() . '/assets/css/custom.css', array(), '1.1', 'all');
+
+	//Font-awesome from ideas-templates
+	wp_enqueue_style(
+		'font-awesome',
+		'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
+		array(),
+		'4.7.0'
+	);
+
+	//Poncho css from ideas-templates
+	wp_enqueue_style('poncho', get_template_directory_uri() . '/assets/css/poncho.min.css', array(), '1.1', 'all');
+
+	//Argentina css from ideas-templates
+	wp_enqueue_style('argentina', get_template_directory_uri() . '/assets/css/argentina.css', array(), '1.1', 'all');
+
+	//Icono-arg css from ideas-templates
+	wp_enqueue_style('icono-arg', get_template_directory_uri() . '/assets/css/icono-arg.css', array(), '1.1', 'all');
+
+
 	wp_enqueue_style('ideas-style', get_stylesheet_uri(), array(), _S_VERSION);
 	wp_style_add_data('ideas-style', 'rtl', 'replace');
+
+	//Jquery from ideas-templates
+	wp_enqueue_script(
+		'jquery',
+		'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js',
+		array(),
+		'3.5.1',
+		true
+	);
+
+	//Bootstrap js from ideas-templates
+	wp_enqueue_script(
+		'bootstrap',
+		'https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js',
+		array(),
+		'3.4.1',
+		true
+	);
+
+	//Select2 css from ideas-templates
+	wp_enqueue_style(
+		'select2',
+		'https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css',
+		array(),
+		'4.1.0'
+	);
+
+	//Select2 js from ideas-templates
+	wp_enqueue_script(
+		'select2',
+		'https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js',
+		array(),
+		'4.1.0',
+		true
+	);
 
 	wp_enqueue_script('ideas-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
 
