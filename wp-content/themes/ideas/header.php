@@ -18,6 +18,7 @@
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link rel="shortcut icon" href="https://argob.github.io/poncho/plantillas/headers-y-footers/img/favicon.ico">
 
 	<?php wp_head(); ?>
 
