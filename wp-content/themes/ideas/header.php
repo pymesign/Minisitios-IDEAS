@@ -10,6 +10,8 @@
  * @package ideas
  */
 
+$ideas_description = get_bloginfo('description', 'display');
+
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -42,36 +44,60 @@
 	<div id="page" class="site">
 		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'ideas'); ?></a>
 
-		<header id="masthead" class="site-header">
-			<div class="site-branding">
-				<?php
-				the_custom_logo();
-				if (is_front_page() && is_home()) :
-				?>
-					<h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
-				<?php
-				else :
-				?>
-					<p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></p>
-				<?php
-				endif;
-				$ideas_description = get_bloginfo('description', 'display');
-				if ($ideas_description || is_customize_preview()) :
-				?>
-					<p class="site-description"><?php echo $ideas_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
-												?></p>
-				<?php endif; ?>
-			</div><!-- .site-branding -->
+		<header id="masthead">
+			<nav class="navbar navbar-top navbar-default navbar-fixed-top" role="navigation">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
 
-			<nav id="site-navigation" class="main-navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'ideas'); ?></button>
-				<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'menu-1',
-						'menu_id'        => 'primary-menu',
-					)
-				);
-				?>
+						<a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>" aria-label="Argentina.gob.ar Ministerio de Educación">
+							<div class="tu-logo"><?php the_custom_logo();
+													bloginfo('name'); ?></div>
+							<div class="tu-slogan"><?php echo $ideas_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
+													?></div>
+						</a>
+					</div>
+
+					<div id="navbar" class="collapse navbar-collapse">
+						<!--<ul class="nav navbar-nav navbar-right">
+							<li class="active"><a class="mainNav" href="#">Inicio</a></li>
+							<li><a class="mainNav" href="#">Blog</a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle mainNav" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label">Proyecto</span> <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Linea de Tiempo</a></li>
+									<li><a href="#">Fuentes</a></li>
+									<li><a href="#">Mentoria</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle mainNav" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label">Institucional</span> <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Acerca de...</a></li>
+									<li><a href="#">Los Equipos</a></li>
+									<li><a href="#">Licencia Creativa</a></li>
+								</ul>
+							</li>
+							<li><a class="mainNav" href="#">Contacto</a></li>
+						</ul>-->
+						<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'menu-1',
+								'menu_id'        => 'primary-menu',
+								'menu_class'           => 'nav navbar-nav navbar-right',
+							)
+						);
+						?>
+					</div>
+
+				</div>
 			</nav><!-- #site-navigation -->
+
+
 		</header><!-- #masthead -->
