@@ -11,7 +11,7 @@
 ?>
 
 <section id="cards">
-	<div class="container">
+	<div class="<?php echo is_front_page() ? 'container' : 'container-fluid' ?>">
 		<div class="panel-pane pane-titulo">
 			<div class="pane-content">
 				<h2 class="activities-sidbar">Accesos</h2>
