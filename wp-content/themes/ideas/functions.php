@@ -156,6 +156,9 @@ add_action('widgets_init', 'ideas_widgets_init');
  */
 function ideas_scripts()
 {
+	wp_enqueue_style('ideas-style', get_stylesheet_uri(), array(), _S_VERSION);
+	wp_style_add_data('ideas-style', 'rtl', 'replace');
+
 	//Google fonts from ideas-templates
 	wp_enqueue_style(
 		'google-fonts',
@@ -191,9 +194,6 @@ function ideas_scripts()
 	//Icono-arg css from ideas-templates
 	wp_enqueue_style('icono-arg', get_template_directory_uri() . '/assets/css/icono-arg.css', array(), '1.1', 'all');
 
-
-	wp_enqueue_style('ideas-style', get_stylesheet_uri(), array(), _S_VERSION);
-	wp_style_add_data('ideas-style', 'rtl', 'replace');
 
 	//Jquery from ideas-templates
 	wp_enqueue_script(
