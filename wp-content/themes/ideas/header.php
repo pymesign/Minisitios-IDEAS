@@ -166,9 +166,9 @@ $ideas_description = get_bloginfo('description', 'display');
 								if (in_array('menu-item-has-children', $item->classes)) {
 									$attributes .= ' class="dropdown-toggle mainNav ' . ($depth > 0 ? 'sub-menu-link' : 'main-menu-link') . '"';
 								} else {
-									$attributes .= ' class="mainNav ' . ($depth > 0 ? 'sub-menu-link' : 'main-menu-link') . '"';
-								}
-								$attributes .= ' data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"';
+									$attributes .= ' class="' . ($depth > 0 ? 'sub-menu-link' : 'main-menu-link') . '"';
+								};
+								//$attributes .= ' data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"';
 
 								// Build HTML output and pass through the proper filter.
 
