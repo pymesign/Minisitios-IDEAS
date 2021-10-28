@@ -55,6 +55,16 @@ if (!function_exists('ideas_setup')) :
 				'menu-1' => esc_html__('primary', 'ideas'),
 			)
 		);
+		register_nav_menus(
+			array(
+				'footer-1' => esc_html__('secondary-1', 'ideas'),
+			)
+		);
+		register_nav_menus(
+			array(
+				'footer-2' => esc_html__('secondary-2', 'ideas'),
+			)
+		);
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
