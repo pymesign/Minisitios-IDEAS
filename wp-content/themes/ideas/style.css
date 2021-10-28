@@ -940,32 +940,4 @@ textarea {
 }
 
 /* Archivo temporario con estilos mínimos previo al diseño de los temas principales */
-header.site-header {
-  text-align: center;
-  background: #ccc;
-  padding: 20px;
-}
-
-main {
-  float: left;
-  width: 70%;
-  padding: 20px;
-}
-
-aside {
-  float: right;
-  width: 30%;
-  padding: 20px;
-}
-
-.main-navigation ul {
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-footer.site-footer {
-  clear: both;
-  background: #000;
-  color: #fff;
-  padding: 10px;
-}
+/*@import "usertemp";*/
