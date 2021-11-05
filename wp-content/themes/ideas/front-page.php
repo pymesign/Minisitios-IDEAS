@@ -50,44 +50,39 @@ get_header();
 		</div>
 	</div>
 
-	<section>
-		<article class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<?php if (get_field('titulo', '10')) : ?>
-						<h2><?php the_field('titulo', '10'); ?></h2>
-					<?php endif; ?>
-					<?php if (get_field('problematica_atendida', '10')) : ?>
-						<p><?php the_field('problematica_atendida', '10'); ?></p>
-					<?php endif; ?>
+	<article class="container-fluid">
+		<div class="row">
+			<div class="col-md-9 col-12">
 
-					<blockquote>
-						<p>Alguna cita del mentor o del equipo haciendo referencia al proyecto o de alguna persona que los inspiro</p>
-						<small>Nombre y Apellido</small>
-					</blockquote>
+				<?php if (get_field('titulo', '10')) : ?>
+					<h2><?php the_field('titulo', '10'); ?></h2>
+				<?php endif; ?>
+				<?php if (get_field('problematica_atendida', '10')) : ?>
+					<p><?php the_field('problematica_atendida', '10'); ?></p>
+				<?php endif; ?>
 
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<?php
+				while (have_posts()) :
+					the_post();
 
-					<?php
-					while (have_posts()) :
-						the_post();
+					get_template_part('template-parts/content', 'page');
 
-						get_template_part('template-parts/content', 'page');
+					// If comments are open or we have at least one comment, load up the comment template.
+					if (comments_open() || get_comments_number()) :
+						comments_template();
+					endif;
 
-						// If comments are open or we have at least one comment, load up the comment template.
-						if (comments_open() || get_comments_number()) :
-							comments_template();
-						endif;
+				endwhile; // End of the loop.
+				?>
 
-					endwhile; // End of the loop.
-					?>
+				<?php get_template_part('template-parts/content', 'cards'); ?>
 
-				</div>
 			</div>
-		</article>
-	</section>
-
-	<?php get_template_part('template-parts/content', 'cards'); ?>
+			<div class="col-md-3 col-12 banner-main-container">
+				<?php get_sidebar(); ?>
+			</div>
+		</div>
+	</article>
 
 </main>
 
