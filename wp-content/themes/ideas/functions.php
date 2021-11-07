@@ -158,6 +158,19 @@ function ideas_widgets_init()
 			'after_title'   => '</h2>',
 		)
 	);
+	if (is_main_site()) :
+		register_sidebar(
+			array(
+				'name'          => esc_html__('Modal', 'ideas'),
+				'id'            => 'modal',
+				'description'   => esc_html__('Add modal widget here.', 'ideas'),
+				'before_widget' => '<section id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</section>',
+				'before_title'  => '<h2 class="widget-title">',
+				'after_title'   => '</h2>',
+			)
+		);
+	endif;
 }
 add_action('widgets_init', 'ideas_widgets_init');
 
