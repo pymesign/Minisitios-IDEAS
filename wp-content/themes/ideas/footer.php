@@ -18,9 +18,12 @@
 			<div class="col-md-4 col-sm-6">
 				<div class="region region-footer1">
 					<section id="block-menu-menu-footer-1" class="block block-menu clearfix">
-						<h2 class="block-title h3 section-title h3 section-title">INET</h2>
+						<!--<h2 class="block-title h3 section-title h3 section-title">INET</h2>
 						<p>Todos los derechos reservados<br>Saavedra 789 - C1129ACE<br>Ciudad de Buenos Aires<br>Argentina</p>
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-ideas.svg" width="150px">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-ideas.svg" width="150px">-->
+						<?php if (is_active_sidebar('footer-left')) { ?>
+							<?php dynamic_sidebar('footer-left'); ?>
+						<?php } ?>
 					</section>
 				</div>
 			</div>
@@ -72,13 +75,13 @@
 					<section id="block-menu-menu-footer-3" class="block block-menu clearfix">
 						<!--<h2 class="block-title h3 section-title h3 section-title">Nombre de Escuela</h2>
 						<p>Datos de contacto<br>Telefono: 54-11 4444-4444<br>MaiL: <a href="#">info@escuela.com.ar</a><br>Dirección de la escuela</p>-->
-						<?php echo do_shortcode('[content_block slug=datos-de-escuela]'); ?>
+						<?php if (is_active_sidebar('footer-right')) { ?>
+							<?php dynamic_sidebar('footer-right'); ?>
+						<?php } ?>
 					</section>
 
-					<!-- espacio para un widget custom -->
-					<?php if (is_active_sidebar('footer')) { ?>
-						<?php dynamic_sidebar('footer'); ?>
-					<?php } ?>
+
+
 
 				</div>
 			</div>

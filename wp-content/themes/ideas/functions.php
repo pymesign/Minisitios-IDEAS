@@ -158,6 +158,24 @@ function ideas_widgets_init()
 			'after_title'   => '</h2>',
 		)
 	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__('Footer left', 'ideas'),
+			'id'            => 'footer-left',
+			'description'   => esc_html__('Add footer left widgets here.', 'ideas'),
+			'before_title'  => '<h2 class="block-title h3 section-title h3 section-title">',
+			'after_title'   => '</h2>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__('Footer right', 'ideas'),
+			'id'            => 'footer-right',
+			'description'   => esc_html__('Add footer right widgets here.', 'ideas'),
+			'before_title'  => '<h2 class="block-title h3 section-title h3 section-title">',
+			'after_title'   => '</h2>',
+		)
+	);
 	if (is_main_site()) :
 		register_sidebar(
 			array(
