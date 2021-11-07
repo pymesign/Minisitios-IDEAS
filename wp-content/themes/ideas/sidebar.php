@@ -39,9 +39,11 @@
 			switch_to_blog('1');
 			// Llamado a content block
 			echo do_shortcode('[content_block id=49]');
+			dynamic_sidebar('sidebar-1');
 			restore_current_blog();
 			?>
-			<?php dynamic_sidebar('sidebar-1'); ?>
+			<?php dynamic_sidebar('sidebar-1');
+			?>
 		</div>
 	</div>
 </aside><!-- #secondary -->
