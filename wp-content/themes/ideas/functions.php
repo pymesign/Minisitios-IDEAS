@@ -163,6 +163,8 @@ function ideas_widgets_init()
 			'name'          => esc_html__('Footer left', 'ideas'),
 			'id'            => 'footer-left',
 			'description'   => esc_html__('Add footer left widgets here.', 'ideas'),
+			'before_widget' => '',
+			'after_widget'  => '',
 			'before_title'  => '<h2 class="block-title h3 section-title h3 section-title">',
 			'after_title'   => '</h2>',
 		)
@@ -172,8 +174,43 @@ function ideas_widgets_init()
 			'name'          => esc_html__('Footer right', 'ideas'),
 			'id'            => 'footer-right',
 			'description'   => esc_html__('Add footer right widgets here.', 'ideas'),
+			'before_widget' => '',
+			'after_widget'  => '',
 			'before_title'  => '<h2 class="block-title h3 section-title h3 section-title">',
 			'after_title'   => '</h2>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__('Card 1', 'ideas'),
+			'id'            => 'card-1',
+			'description'   => esc_html__('Add card 1 widget here.', 'ideas'),
+			'before_widget' => '',
+			'after_widget'  => '',
+			'before_title'  => '<h3 class="block-title h3 section-title h3 section-title">',
+			'after_title'   => '</h3>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__('Card 2', 'ideas'),
+			'id'            => 'card-2',
+			'description'   => esc_html__('Add card 2 widget here.', 'ideas'),
+			'before_widget' => '',
+			'after_widget'  => '',
+			'before_title'  => '<h3 class="block-title h3 section-title h3 section-title">',
+			'after_title'   => '</h3>',
+		)
+	);
+	register_sidebar(
+		array(
+			'name'          => esc_html__('Card 3', 'ideas'),
+			'id'            => 'card-3',
+			'description'   => esc_html__('Add card 3 widget here.', 'ideas'),
+			'before_widget' => '',
+			'after_widget'  => '',
+			'before_title'  => '<h3 class="block-title h3 section-title h3 section-title">',
+			'after_title'   => '</h3>',
 		)
 	);
 	if (is_main_site()) :
@@ -344,3 +381,146 @@ function ocdi_after_import_setup()
 	update_option('page_for_posts', $blog_page_id->ID);
 }
 add_action('ocdi/after_import', 'ocdi_after_import_setup');
+
+//creamos el widget para cards
+
+function cards_register_widget()
+{
+	register_widget('cards_widget');
+}
+add_action('widgets_init', 'cards_register_widget');
+
+class cards_widget extends WP_Widget
+{
+	function __construct()
+	{
+		parent::__construct(
+			// widget ID
+			'cards_widget',
+			// widget name
+			__('Cards Widget', ' cards_widget_domain'),
+			// widget description
+			array('description' => __('Cards Widget', 'cards_widget_domain'),)
+		);
+	}
+	public function widget($args, $instance)
+	{
+		$title = apply_filters('widget_title', $instance['title']);
+		$text = apply_filters('widget_text', $instance['text']);
+		$link = apply_filters('widget_link', $instance['link']);
+		$estilo = apply_filters('widget_estilo', $instance['estilo']);
+		//$image_uri = apply_filters('widget_image_uri', $instance['image_uri']);
+		echo $args['before_widget'];
+
+		//output
+		// Display text field
+
+		if ($text) {
+
+			echo '<a href="' . $link . '" class="panel panel-default panel-border-' . $estilo . '">';
+
+			echo '<div class="panel-body">';
+
+			echo '<div style="background-image:url(' . esc_url($instance['image_uri']) . ');" class="panel-heading"></div>';
+
+			//if title is present
+			if (!empty($title))
+				echo $args['before_title'] . $title . $args['after_title'];
+
+			echo '<div class="text-muted"><p>' . $text . '</p></div>';
+
+			echo '</div>';
+
+			echo '</a>';
+		}
+		echo $args['after_widget'];
+	}
+	public function form($instance)
+	{
+		if (isset($instance['title'])) {
+			$title = $instance['title'];
+		} else {
+			$title = __('Título', 'cards_widget_domain');
+		}
+		if (isset($instance['text'])) {
+			$text = $instance['text'];
+		} else {
+			$text = __('Descripción', 'cards_widget_domain');
+		}
+		if (isset($instance['estilo'])) {
+			$estilo = $instance['estilo'];
+		} else {
+			$estilo = __('mandarina', 'cards_widget_domain');
+		}
+?>
+
+		<p>
+			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:'); ?></label>
+			<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" />
+		</p>
+		<p>
+			<label for="<?php echo esc_attr($this->get_field_id('text')); ?>"><?php _e('Text: ', 'text_domain'); ?></label>
+			<input class="widefat" id="<?php echo esc_attr($this->get_field_id('text')); ?>" name="<?php echo esc_attr($this->get_field_name('text')); ?>" type="text" value="<?php echo esc_attr($text); ?>" />
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id('link'); ?>"><?php _e('Link:'); ?></label>
+			<input class="widefat" id="<?php echo $this->get_field_id('link'); ?>" name="<?php echo $this->get_field_name('link'); ?>" type="text" value="<?php echo esc_attr($link); ?>" />
+		</p>
+		<p>
+			<label for="<?= $this->get_field_id('image_uri'); ?>">Image</label>
+			<img class="<?= $this->id ?>_img" src="<?= (!empty($instance['image_uri'])) ? $instance['image_uri'] : ''; ?>" style="margin:0;padding:0;max-width:100%;display:block" />
+			<input type="text" class="widefat <?= $this->id ?>_url" name="<?= $this->get_field_name('image_uri'); ?>" value="<?= $instance['image_uri']; ?>" style="margin-top:5px;" />
+			<input type="button" id="<?= $this->id ?>" class="button button-primary js_custom_upload_media" value="Upload Image" style="margin-top:5px;" />
+		</p>
+
+
+		<p class="form-row form-row-name">
+			<label for="<?php echo $this->get_field_id('estilo'); ?>"><?php _e('Estilo', 'text_domain'); ?></label>
+			<select name="<?php echo $this->get_field_name('estilo'); ?>" id="<?php echo $this->get_field_id('estilo'); ?>" class="widefat">
+
+				<?php
+
+				// Your options array
+
+				$options = array(
+
+					''        => __('Estilo', 'cards_widget_domain'),
+
+					'mandarina' => __('Option 1', 'cards_widget_domain'),
+
+					'cereza' => __('Option 2', 'cards_widget_domain'),
+
+					'lavanda' => __('Option 3', 'cards_widget_domain'),
+
+				);
+
+				// Loop through options and add each one to the select dropdown
+
+				foreach ($options as $key => $name) {
+
+					echo '<option value="' . esc_attr($key) . '" id="' . esc_attr($key) . '" ' . selected($estilo, $key, false) . '>' . $name . '</option>';
+				} ?>
+
+			</select>
+		</p>
+<?php
+	}
+	public function update($new_instance, $old_instance)
+	{
+		$instance = array();
+		$instance['title'] = (!empty($new_instance['title'])) ? strip_tags($new_instance['title']) : '';
+		$instance['text'] = (!empty($new_instance['text'])) ? strip_tags($new_instance['text']) : '';
+		$instance['link'] = (!empty($new_instance['link'])) ? strip_tags($new_instance['link']) : '';
+		$instance['image_uri'] = (!empty($new_instance['image_uri'])) ? strip_tags($new_instance['image_uri']) : '';
+		$instance['estilo'] = (!empty($new_instance['estilo'])) ? strip_tags($new_instance['estilo']) : '';
+		return $instance;
+	}
+}
+
+// Enqueue additional admin scripts
+add_action('admin_enqueue_scripts', 'ctup_wdscript');
+function ctup_wdscript()
+{
+	wp_enqueue_media();
+	wp_enqueue_script('ads_script', get_template_directory_uri() . '/js/widget.js', false, '1.0.0', true);
+}

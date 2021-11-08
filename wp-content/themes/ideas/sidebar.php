@@ -42,7 +42,7 @@
 			dynamic_sidebar('sidebar-1');
 			restore_current_blog();
 			?>
-			<?php dynamic_sidebar('sidebar-1');
+			<?php //dynamic_sidebar('sidebar-1');
 			?>
 		</div>
 	</div>
