@@ -116,15 +116,55 @@ if (!function_exists('ideas_setup')) :
 		/** quitamos los custom colors del editor **/
 		add_theme_support('disable-custom-colors');
 
-		// Editor color palette.
-		$black     = '#000000';
-		$celest    = '#37BBED';
-		$celeste      = '#2897d4';
-		$verde     = '#2e7d33';
-		$azul      = '#0072bb';
-		$rojo       = '#c62828';
-		$amarillo    = '#f9a822';
-		$white     = '#FFFFFF';
+		$paleta = esc_attr(get_option('paleta_colores'));
+
+		// Editor color palette 1.
+		if ($paleta == 'uno') :
+			$black     = '#000000';
+			$azul      = '#0072bb'; //primary
+			$celest    = '#37BBED'; //secondary
+			$celeste      = '#2897d4'; //info
+			$verde     = '#2e7d33'; //success			
+			$rojo       = '#c62828'; //danger
+			$amarillo    = '#f9a822'; //warning
+			$white     = '#FFFFFF';
+		endif;
+
+		// Editor color palette 2.
+		if ($paleta == 'dos') :
+			$black     = '#000000';
+			$azul      = '#242582'; //primary
+			$celest    = '#2F2FA2'; //secondary
+			$celeste      = '#659DBD'; //info
+			$verde     = '#8EE4AF'; //success			
+			$rojo       = '#F64C72'; //danger
+			$amarillo    = '#99738E'; //warning
+			$white     = '#FFFFFF';
+		endif;
+
+		// Editor color palette 3.
+		if ($paleta == 'tres') :
+			$black     = '#000000';
+			$azul      = '#557A95'; //primary
+			$celest    = '#7395AE'; //secondary
+			$celeste      = '#5D5C61'; //info
+			$verde     = '#45A29E'; //success			
+			$rojo       = '#83577B'; //danger
+			$amarillo    = '#B1A296'; //warning
+			$white     = '#FFFFFF';
+		endif;
+
+		// Editor color palette 4.
+		if ($paleta == 'cuatro') :
+			$black     = '#000000';
+			$azul      = '#5F6366'; //primary
+			$celest    = '#4D6D9A'; //secondary
+			$celeste      = '#86B3D1'; //info
+			$verde     = '#99CED3'; //success			
+			$rojo       = '#EDB5BF'; //danger
+			$amarillo    = '#FBE8A6'; //warning
+			$white     = '#FFFFFF';
+		endif;
 
 		add_theme_support(
 			'editor-color-palette',
@@ -133,6 +173,11 @@ if (!function_exists('ideas_setup')) :
 					'name'  => esc_html__('Black', 'ideas'),
 					'slug'  => 'black',
 					'color' => $black,
+				),
+				array(
+					'name'  => esc_html__('Azul', 'ideas'),
+					'slug'  => 'azul',
+					'color' => $azul,
 				),
 				array(
 					'name'  => esc_html__('Celeste claro', 'ideas'),
@@ -145,16 +190,6 @@ if (!function_exists('ideas_setup')) :
 					'color' => $celeste,
 				),
 				array(
-					'name'  => esc_html__('Verde', 'ideas'),
-					'slug'  => 'verde',
-					'color' => $verde,
-				),
-				array(
-					'name'  => esc_html__('Azul', 'ideas'),
-					'slug'  => 'azul',
-					'color' => $azul,
-				),
-				array(
 					'name'  => esc_html__('Rojo', 'ideas'),
 					'slug'  => 'rojo',
 					'color' => $rojo,
@@ -163,6 +198,11 @@ if (!function_exists('ideas_setup')) :
 					'name'  => esc_html__('Amarillo', 'ideas'),
 					'slug'  => 'amarillo',
 					'color' => $amarillo,
+				),
+				array(
+					'name'  => esc_html__('Verde', 'ideas'),
+					'slug'  => 'verde',
+					'color' => $verde,
 				),
 				array(
 					'name'  => esc_html__('White', 'ideas'),

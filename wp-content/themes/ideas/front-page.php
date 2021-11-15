@@ -34,11 +34,11 @@ get_header();
 						<div class="container">
 							<div class="row">
 								<div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
-									<?php if (get_field('titulo', '10')) : ?>
-										<h2><?php the_field('titulo', '10'); ?></h2>
+									<?php if (get_option('project_name')) : ?>
+										<h2><?php echo esc_attr(get_option('project_name')); ?></h2>
 									<?php endif; ?>
-									<?php if (get_field('descripcion', '10')) : ?>
-										<p><?php the_field('descripcion', '10'); ?></p>
+									<?php if (get_option('project_description')) : ?>
+										<p><?php echo esc_attr(get_option('project_description')); ?></p>
 									<?php endif; ?>
 								</div>
 							</div>
@@ -54,11 +54,11 @@ get_header();
 		<div class="row">
 			<div class="col-md-9 col-12">
 
-				<?php if (get_field('titulo', '10')) : ?>
-					<h2><?php the_field('titulo', '10'); ?></h2>
+				<?php if (get_option('project_name')) : ?>
+					<h2><?php echo esc_attr(get_option('project_name')); ?></h2>
 				<?php endif; ?>
-				<?php if (get_field('problematica_atendida', '10')) : ?>
-					<p><?php the_field('problematica_atendida', '10'); ?></p>
+				<?php if (get_option('project_problematica')) : ?>
+					<p><?php echo esc_attr(get_option('project_problematica')); ?></p>
 				<?php endif; ?>
 
 				<?php

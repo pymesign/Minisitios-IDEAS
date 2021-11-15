@@ -1,5 +1,5 @@
 <?php
-function ideas_setup()
+/*function ideas_setup()
 {
     // Editor color palette.
     $black     = '#000000';
@@ -56,7 +56,7 @@ function ideas_setup()
             ),
         )
     );
-}
+}*/
 function ideas_lite_enqueue_styles()
 {
 
