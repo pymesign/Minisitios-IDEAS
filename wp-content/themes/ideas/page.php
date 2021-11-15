@@ -21,7 +21,7 @@ get_header();
 		<div class="panel-pane pane-imagen-destacada">
 			<div class="pane-content">
 
-				<section class="jumbotron lg p-x-0" style="background-image: url(<?php echo get_header_image(); ?>);">
+				<section class="jumbotron lg p-x-0" style="background-image: url(<?php echo get_field('banner') ? get_field('banner') : get_header_image(); ?>);">
 					<div class="jumbotron_bar">
 						<div class="container">
 							<div class="row">

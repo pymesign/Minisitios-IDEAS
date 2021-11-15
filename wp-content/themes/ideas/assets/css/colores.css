@@ -1,0 +1,36 @@
+.has-azul-color {
+  color: var(--primary);
+}
+.has-azul-background-color {
+  background-color: var(--primary);
+}
+.has-celest-color {
+  color: var(--secondary);
+}
+.has-celest-background-color {
+  background-color: var(--secondary);
+}
+.has-celeste-color {
+  color: var(--info);
+}
+.has-celeste-background-color {
+  background-color: var(--info);
+}
+.has-rojo-color {
+  color: var(--danger);
+}
+.has-rojo-background-color {
+  background-color: var(--danger);
+}
+.has-verde-color {
+  color: var(--success);
+}
+.has-verde-background-color {
+  background-color: var(--success);
+}
+.has-amarillo-color {
+  color: var(--warning);
+}
+.has-amarillo-background-color {
+  background-color: var(--warning);
+}

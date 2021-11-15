@@ -112,6 +112,65 @@ if (!function_exists('ideas_setup')) :
 				'flex-height' => true,
 			)
 		);
+
+		/** quitamos los custom colors del editor **/
+		add_theme_support('disable-custom-colors');
+
+		// Editor color palette.
+		$black     = '#000000';
+		$celest    = '#37BBED';
+		$celeste      = '#2897d4';
+		$verde     = '#2e7d33';
+		$azul      = '#0072bb';
+		$rojo       = '#c62828';
+		$amarillo    = '#f9a822';
+		$white     = '#FFFFFF';
+
+		add_theme_support(
+			'editor-color-palette',
+			array(
+				array(
+					'name'  => esc_html__('Black', 'ideas'),
+					'slug'  => 'black',
+					'color' => $black,
+				),
+				array(
+					'name'  => esc_html__('Celeste claro', 'ideas'),
+					'slug'  => 'celest',
+					'color' => $celest,
+				),
+				array(
+					'name'  => esc_html__('Celeste', 'ideas'),
+					'slug'  => 'celeste',
+					'color' => $celeste,
+				),
+				array(
+					'name'  => esc_html__('Verde', 'ideas'),
+					'slug'  => 'verde',
+					'color' => $verde,
+				),
+				array(
+					'name'  => esc_html__('Azul', 'ideas'),
+					'slug'  => 'azul',
+					'color' => $azul,
+				),
+				array(
+					'name'  => esc_html__('Rojo', 'ideas'),
+					'slug'  => 'rojo',
+					'color' => $rojo,
+				),
+				array(
+					'name'  => esc_html__('Amarillo', 'ideas'),
+					'slug'  => 'amarillo',
+					'color' => $amarillo,
+				),
+				array(
+					'name'  => esc_html__('White', 'ideas'),
+					'slug'  => 'white',
+					'color' => $white,
+				),
+			)
+		);
 	}
 endif;
 add_action('after_setup_theme', 'ideas_setup');
@@ -255,6 +314,9 @@ function ideas_scripts()
 	//Custom css from ideas-templates
 	wp_enqueue_style('custom', get_template_directory_uri() . '/assets/css/custom.css', array(), '1.1', 'all');
 
+	//Colores css from ideas-templates
+	wp_enqueue_style('colores', get_template_directory_uri() . '/assets/css/colores.css', array(), '1.1', 'all');
+
 	//Font-awesome from ideas-templates
 	wp_enqueue_style(
 		'font-awesome',
@@ -343,6 +405,12 @@ if (defined('JETPACK__VERSION')) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * #MODIF# custom admin options
+ */
+require get_template_directory() . '/inc/function-admin.php';
+require get_template_directory() . '/inc/enqueue.php';
+
 //OCDI options custom #MODIF#
 function ocdi_import_files()
 {
@@ -409,6 +477,7 @@ class cards_widget extends WP_Widget
 		$text = apply_filters('widget_text', $instance['text']);
 		$link = apply_filters('widget_link', $instance['link']);
 		$estilo = apply_filters('widget_estilo', $instance['estilo']);
+		$sombra = $instance['sombra'] ? 'shadow-lg' : '';
 		//$image_uri = apply_filters('widget_image_uri', $instance['image_uri']);
 		echo $args['before_widget'];
 
@@ -417,11 +486,11 @@ class cards_widget extends WP_Widget
 
 		if ($text) {
 
-			echo '<a href="' . $link . '" class="panel panel-default panel-border-' . $estilo . '">';
-
-			echo '<div class="panel-body">';
+			echo '<a href="' . $link . '" class="panel panel-default panel-border-' . $estilo . ' ' . $sombra . '">';
 
 			echo '<div style="background-image:url(' . esc_url($instance['image_uri']) . ');" class="panel-heading"></div>';
+
+			echo '<div class="panel-body">';
 
 			//if title is present
 			if (!empty($title))
@@ -503,6 +572,11 @@ class cards_widget extends WP_Widget
 
 			</select>
 		</p>
+
+		<p>
+			<label for="<?php echo esc_attr($this->get_field_id('sombra')); ?>"><?php _e('Sombreado ', 'text_domain'); ?></label>
+			<input class="checkbox" type="checkbox" <?php checked($instance['sombra'], 'on'); ?> id="<?php echo $this->get_field_id('sombra'); ?>" name="<?php echo $this->get_field_name('sombra'); ?>" />
+		</p>
 <?php
 	}
 	public function update($new_instance, $old_instance)
@@ -513,6 +587,7 @@ class cards_widget extends WP_Widget
 		$instance['link'] = (!empty($new_instance['link'])) ? strip_tags($new_instance['link']) : '';
 		$instance['image_uri'] = (!empty($new_instance['image_uri'])) ? strip_tags($new_instance['image_uri']) : '';
 		$instance['estilo'] = (!empty($new_instance['estilo'])) ? strip_tags($new_instance['estilo']) : '';
+		$instance['sombra'] = $new_instance['sombra'];
 		return $instance;
 	}
 }
