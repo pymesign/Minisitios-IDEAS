@@ -64,27 +64,7 @@ $ideas_description = get_bloginfo('description', 'display');
 					</div>
 
 					<div id="navbar" class="collapse navbar-collapse">
-						<!--<ul class="nav navbar-nav navbar-right">
-							<li class="active"><a class="mainNav" href="#">Inicio</a></li>
-							<li><a class="mainNav" href="#">Blog</a></li>
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle mainNav" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label">Proyecto</span> <span class="caret"></span></a>
-								<ul class="dropdown-menu">
-									<li><a href="#">Linea de Tiempo</a></li>
-									<li><a href="#">Fuentes</a></li>
-									<li><a href="#">Mentoria</a></li>
-								</ul>
-							</li>
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle mainNav" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label">Institucional</span> <span class="caret"></span></a>
-								<ul class="dropdown-menu">
-									<li><a href="#">Acerca de...</a></li>
-									<li><a href="#">Los Equipos</a></li>
-									<li><a href="#">Licencia Creativa</a></li>
-								</ul>
-							</li>
-							<li><a class="mainNav" href="#">Contacto</a></li>
-						</ul>-->
+
 						<?php
 						wp_nav_menu(
 							array(
