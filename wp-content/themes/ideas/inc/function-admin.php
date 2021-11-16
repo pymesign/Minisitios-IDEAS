@@ -28,18 +28,30 @@ function ideas_custom_settings()
     register_setting('ideas-settings-group', 'profile_picture');
     register_setting('ideas-settings-group', 'sidebar_position');
     register_setting('ideas-settings-group', 'paleta_colores');
+    register_setting('ideas-settings-group', 'activate_carousel');
+    register_setting('ideas-settings-group', 'carousel_image_1');
+    register_setting('ideas-settings-group', 'carousel_image_2');
+    register_setting('ideas-settings-group', 'carousel_image_3');
 
     add_settings_section('ideas-sidebar-options', 'Project Details', 'ideas_sidebar_options', 'customize_ideas');
     add_settings_section('ideas-sidebar-options-template', 'Layout Options', 'ideas_sidebar_options_template', 'customize_ideas');
+    add_settings_section('ideas-sidebar-options-carousel', 'Carousel Options', 'ideas_sidebar_options_carousel', 'customize_ideas');
 
+    //Project details
     add_settings_field('project-name', 'Project name', 'ideas_project_name', 'customize_ideas', 'ideas-sidebar-options');
     add_settings_field('project-problematica', 'Problemática atendida', 'ideas_project_problematica', 'customize_ideas', 'ideas-sidebar-options');
     add_settings_field('project-solucion', 'Solución tecnológica aportada', 'ideas_project_solucion', 'customize_ideas', 'ideas-sidebar-options');
     add_settings_field('project-impacto', 'Impacto', 'ideas_project_impacto', 'customize_ideas', 'ideas-sidebar-options');
     //add_settings_field('sidebar-twitter', 'Twitther handler', 'ideas_sidebar_twitter', 'customize_ideas', 'ideas-sidebar-options');
     add_settings_field('sidebar-profile-picture', 'Imagen representativa', 'ideas_sidebar_profile', 'customize_ideas', 'ideas-sidebar-options');
+
+    //Layout options
     add_settings_field('sidebar-position', 'Sidebar position', 'ideas_sidebar_position', 'customize_ideas', 'ideas-sidebar-options-template');
     add_settings_field('paleta-colores', 'Paleta de colores', 'ideas_paleta_colores', 'customize_ideas', 'ideas-sidebar-options-template');
+
+    //Carousel options
+    add_settings_field('activate-carousel', 'Activar carousel', 'ideas_activate_carousel', 'customize_ideas', 'ideas-sidebar-options-carousel');
+    add_settings_field('carousel-image-1', 'Imagen 1', 'ideas_carousel_images', 'customize_ideas', 'ideas-sidebar-options-carousel');
 }
 function ideas_sidebar_options()
 {
@@ -105,6 +117,36 @@ function ideas_paleta_colores()
     $output .= '<p><label for="paleta_colores_3"><input type="radio" name="paleta_colores" id="paleta_colores_3" value="tres" ' . $checkedTres . ' /> Paleta 3 </label></p>';
     $output .= '<p><label for="paleta_colores_4"><input type="radio" name="paleta_colores" id="paleta_colores_4" value="cuatro" ' . $checkedCuatro . ' /> Paleta 4 </label></p>';
     echo $output;
+}
+
+function ideas_activate_carousel()
+{
+    $options = get_option('activate_carousel');
+    $checked_yes = ($options == '1' ? 'checked' : '');
+    $checked_no = ($options == '0' ? 'checked' : '');
+
+    $output = '';
+
+    $output .= '<p><label for="activate_carousel_1"><input type="radio" name="activate_carousel" id="activate_carousel_1" value="1" ' . $checked_yes . ' /> Si </label></p>';
+    $output .= '<p><label for="activate_carousel_0"><input type="radio" name="activate_carousel" id="activate_carousel_0" value="0" ' . $checked_no . ' /> No </label></p>';
+    echo $output;
+}
+
+function ideas_carousel_images()
+{
+    $imagen_uno = esc_attr(get_option('carousel_image_1'));
+    $imagen_dos = esc_attr(get_option('carousel_image_2'));
+    $imagen_tres = esc_attr(get_option('carousel_image_3'));
+?>
+    <input type="button" class="button button-secondary upload-button" value="Upload Profile Picture" data-group="1">
+    <input type="hidden" name="carousel_image_1" id="carousel-image-1" value="<?php echo $imagen_uno; ?>">
+
+    <input type="button" class="button button-secondary upload-button" value="Upload Profile Picture" data-group="2">
+    <input type="hidden" name="carousel_image_2" id="carousel-image-2" value="<?php echo $imagen_dos; ?>">
+
+    <input type="button" class="button button-secondary upload-button" value="Upload Profile Picture" data-group="3">
+    <input type="hidden" name="carousel_image_3" id="carousel-image-3" value="<?php echo $imagen_tres; ?>">
+<?php
 }
 
 /*function ideas_sidebar_twitter()
