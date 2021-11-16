@@ -16,25 +16,6 @@
 <aside id="secondary" class="widget-area">
 	<div class="row">
 		<div class="col-12 banner-container">
-			<!-- en principio los campos específicos del proyecto salen en el sidebar -->
-			<!--<?php if (get_field('titulo', '10')) : ?>
-				<h2><?php the_field('titulo', '10'); ?></h2>
-			<?php endif; ?>
-			<?php if (get_field('descripcion', '10')) : ?>
-				<h3><?php the_field('descripcion', '10'); ?></h3>
-			<?php endif; ?>
-			<?php if (get_field('problematica_atendida', '10')) : ?>
-				<p><?php the_field('problematica_atendida', '10'); ?></p>
-			<?php endif; ?>
-			<?php if (get_field('solucion_tecnologica_aportada', '10')) : ?>
-				<p><?php the_field('solucion_tecnologica_aportada', '10'); ?></p>
-			<?php endif; ?>
-			<?php if (get_field('impacto', '10')) : ?>
-				<p><?php the_field('impacto', '10'); ?></p>
-			<?php endif; ?>
-			<?php if (get_field('imagen_representativa', '10')) : ?>
-				<p><img src="<?php the_field('imagen_representativa', '10'); ?>" alt="Imagen representativa" /></p>
-			<?php endif; ?>-->
 			<?php
 			switch_to_blog('1');
 			// Llamado a content block
