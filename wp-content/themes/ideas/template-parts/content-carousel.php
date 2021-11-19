@@ -8,6 +8,10 @@
  * @package ideas
  */
 
+$imagen_uno = esc_attr(get_option('carousel_image_1'));
+$imagen_dos = esc_attr(get_option('carousel_image_2'));
+$imagen_tres = esc_attr(get_option('carousel_image_3'));
+
 ?>
 
 <!-- Carousel Fullwidth-->
@@ -30,7 +34,7 @@
 			<!-- Wrapper for slides -->
 			<div class="carousel-inner">
 				<div class="item active">
-					<img class="carousel-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/banner1.jpg" alt="First slide">
+					<img class="carousel-img" src="<?php echo $imagen_uno; ?>" alt="First slide">
 					<!-- Static Header -->
 					<div class="header-text hidden-xs">
 						<div class="col-md-12 text-center">
@@ -40,7 +44,7 @@
 					</div><!-- /header-text -->
 				</div>
 				<div class="item">
-					<img class="carousel-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/banner1.jpg" alt="Second slide">
+					<img class="carousel-img" src="<?php echo $imagen_dos; ?>" alt="Second slide">
 					<!-- Static Header -->
 					<div class="header-text hidden-xs">
 						<div class="col-md-12 text-center">
@@ -50,7 +54,7 @@
 					</div><!-- /header-text -->
 				</div>
 				<div class="item">
-					<img class="carousel-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/banner1.jpg" alt="Third slide">
+					<img class="carousel-img" src="<?php echo $imagen_tres; ?>" alt="Third slide">
 					<!-- Static Header -->
 					<div class="header-text hidden-xs">
 						<div class="col-md-12 text-center">

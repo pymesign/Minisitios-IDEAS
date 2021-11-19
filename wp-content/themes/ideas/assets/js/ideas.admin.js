@@ -34,13 +34,13 @@ jQuery(document).ready(function ($) {
     e.preventDefault();
     var buttonID = $(this).data('group');
 
-    if (mediaUploaderCarousel) {
+    /*if (mediaUploaderCarousel) {
       mediaUploaderCarousel.open();
       return;
-    }
+    }*/
 
     mediaUploaderCarousel = wp.media.frames.file_frame = wp.media({
-      title: 'Choose a Hotel Picture',
+      title: 'Choose a Picture',
       button: {
         text: 'Choose Picture',
       },

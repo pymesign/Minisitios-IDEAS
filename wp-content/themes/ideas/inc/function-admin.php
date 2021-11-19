@@ -24,7 +24,7 @@ function ideas_custom_settings()
     register_setting('ideas-settings-group', 'project_problematica');
     register_setting('ideas-settings-group', 'project_solucion');
     register_setting('ideas-settings-group', 'project_impacto');
-    register_setting('ideas-settings-group', 'twitter_handler' . 'ideas_sanitize_twitter_handler');
+    //register_setting('ideas-settings-group', 'twitter_handler' . 'ideas_sanitize_twitter_handler');
     register_setting('ideas-settings-group', 'profile_picture');
     register_setting('ideas-settings-group', 'sidebar_position');
     register_setting('ideas-settings-group', 'paleta_colores');
@@ -51,7 +51,7 @@ function ideas_custom_settings()
 
     //Carousel options
     add_settings_field('activate-carousel', 'Activar carousel', 'ideas_activate_carousel', 'customize_ideas', 'ideas-sidebar-options-carousel');
-    add_settings_field('carousel-image-1', 'Imagen 1', 'ideas_carousel_images', 'customize_ideas', 'ideas-sidebar-options-carousel');
+    add_settings_field('carousel-images', 'Sliders', 'ideas_carousel_images', 'customize_ideas', 'ideas-sidebar-options-carousel');
 }
 function ideas_sidebar_options()
 {
@@ -81,7 +81,11 @@ function ideas_project_impacto()
 }
 function ideas_sidebar_profile()
 {
-    $picture = esc_attr(get_option('profile_picture'));
+    $picture = esc_attr(get_option('profile_picture')); ?>
+    <div class="image-container">
+        <div id="profile-picture-preview" class="profile-picture" style="background-image: url(<?php print $picture; ?>);"></div>
+    </div>
+<?php
     echo '<input type="button" class="button button-secondary" value="Upload Profile Picture" id="upload-button">
     <input type="hidden" id="profile-picture" name="profile_picture" value="' . $picture . '" />';
 }
@@ -95,8 +99,8 @@ function ideas_sidebar_position()
     if (!$options) :
         $checkedLeft = 'checked';
     endif;
-    $output .= '<p><label for="sidebar_position_1"><input type="radio" name="sidebar_position" id="sidebar_position_1" value="left" ' . $checkedLeft . ' /> Left </label></p>';
-    $output .= '<p><label for="sidebar_position_0"><input type="radio" name="sidebar_position" id="sidebar_position_0" value="right" ' . $checkedRight . ' /> Right </label></p>';
+    $output .= '<p><label for="sidebar_position_1"><input type="radio" name="sidebar_position" id="sidebar_position_1" value="left" ' . $checkedLeft . ' /> Left </label><img style="width:150px;vertical-align:middle;" src="' . get_template_directory_uri() . '/assets/img/sidebar-left.jpg" /></p>';
+    $output .= '<p><label for="sidebar_position_0"><input type="radio" name="sidebar_position" id="sidebar_position_0" value="right" ' . $checkedRight . ' /> Right </label><img style="width:150px;vertical-align:middle;" src="' . get_template_directory_uri() . '/assets/img/sidebar-right.jpg" /></p>';
     echo $output;
 }
 
@@ -112,10 +116,10 @@ function ideas_paleta_colores()
         $checkedUno = 'checked';
     endif;
     $output = '';
-    $output .= '<p><label for="paleta_colores_1"><input type="radio" name="paleta_colores" id="paleta_colores_1" value="uno" ' . $checkedUno . ' /> Paleta 1 </label></p>';
-    $output .= '<p><label for="paleta_colores_2"><input type="radio" name="paleta_colores" id="paleta_colores_2" value="dos" ' . $checkedDos . ' /> Paleta 2 </label></p>';
-    $output .= '<p><label for="paleta_colores_3"><input type="radio" name="paleta_colores" id="paleta_colores_3" value="tres" ' . $checkedTres . ' /> Paleta 3 </label></p>';
-    $output .= '<p><label for="paleta_colores_4"><input type="radio" name="paleta_colores" id="paleta_colores_4" value="cuatro" ' . $checkedCuatro . ' /> Paleta 4 </label></p>';
+    $output .= '<p><label for="paleta_colores_1"><input type="radio" name="paleta_colores" id="paleta_colores_1" value="uno" ' . $checkedUno . ' /> Paleta 1 </label><img style="width:150px;vertical-align:middle;" src="' . get_template_directory_uri() . '/assets/img/PALETA-1.png" /></p>';
+    $output .= '<p><label for="paleta_colores_2"><input type="radio" name="paleta_colores" id="paleta_colores_2" value="dos" ' . $checkedDos . ' /> Paleta 2 </label><img style="width:150px;vertical-align:middle;" src="' . get_template_directory_uri() . '/assets/img/PALETA-2.png" /></p>';
+    $output .= '<p><label for="paleta_colores_3"><input type="radio" name="paleta_colores" id="paleta_colores_3" value="tres" ' . $checkedTres . ' /> Paleta 3 </label><img style="width:150px;vertical-align:middle;" src="' . get_template_directory_uri() . '/assets/img/PALETA-3.png" /></p>';
+    $output .= '<p><label for="paleta_colores_4"><input type="radio" name="paleta_colores" id="paleta_colores_4" value="cuatro" ' . $checkedCuatro . ' /> Paleta 4 </label><img style="width:150px;vertical-align:middle;" src="' . get_template_directory_uri() . '/assets/img/PALETA-4.png" /></p>';
     echo $output;
 }
 
@@ -138,14 +142,21 @@ function ideas_carousel_images()
     $imagen_dos = esc_attr(get_option('carousel_image_2'));
     $imagen_tres = esc_attr(get_option('carousel_image_3'));
 ?>
-    <input type="button" class="button button-secondary upload-button" value="Upload Profile Picture" data-group="1">
-    <input type="hidden" name="carousel_image_1" id="carousel-image-1" value="<?php echo $imagen_uno; ?>">
 
-    <input type="button" class="button button-secondary upload-button" value="Upload Profile Picture" data-group="2">
-    <input type="hidden" name="carousel_image_2" id="carousel-image-2" value="<?php echo $imagen_dos; ?>">
+    <div id="carousel-image-preview1" class="profile-picture" style="background-image: url(<?php print $imagen_uno; ?>);"></div>
+    <p><input type="button" class="button button-secondary upload-button" value="Subir slide 1" data-group="1">
+        <input type="hidden" name="carousel_image_1" id="carousel-image-1" value="<?php echo $imagen_uno; ?>">
+    </p>
 
-    <input type="button" class="button button-secondary upload-button" value="Upload Profile Picture" data-group="3">
-    <input type="hidden" name="carousel_image_3" id="carousel-image-3" value="<?php echo $imagen_tres; ?>">
+    <div id="carousel-image-preview2" class="profile-picture" style="background-image: url(<?php print $imagen_dos; ?>);"></div>
+    <p><input type="button" class="button button-secondary upload-button" value="Subir slide 2" data-group="2">
+        <input type="hidden" name="carousel_image_2" id="carousel-image-2" value="<?php echo $imagen_dos; ?>">
+    </p>
+
+    <div id="carousel-image-preview3" class="profile-picture" style="background-image: url(<?php print $imagen_tres; ?>);"></div>
+    <p><input type="button" class="button button-secondary upload-button" value="Subir slide 3" data-group="3">
+        <input type="hidden" name="carousel_image_3" id="carousel-image-3" value="<?php echo $imagen_tres; ?>">
+    </p>
 <?php
 }
 

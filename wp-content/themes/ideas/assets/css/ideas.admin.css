@@ -4,7 +4,6 @@
 .ideas-general-form,
 .ideas-sidebar-preview {
   display: inline-block;
-  float: left;
 }
 
 .ideas-sidebar-preview {
@@ -39,11 +38,14 @@ h2.ideas-description {
   text-align: center;
 }
 .profile-picture {
-  width: 122px;
-  height: 122px;
+  width: 400px;
+  height: 200px;
   overflow: hidden;
-  margin: 10px;
+  margin: 10px 0;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.toplevel_page_customize_ideas form table.form-table tbody tr td p {
+  margin: 10px 0;
 }
